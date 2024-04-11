@@ -17,3 +17,12 @@ spring:
 
 build:
     version: "1.0"
+
+accounts:
+    message: "Welcome to Eazybank accounts related local APIs"
+    contactDetails:
+        name: "Shivam Verma - Developer"
+        email: "shivamvermasv380@gmail.com"
+    onCallSupport:
+        -(555) 555-1234
+        -(555) 553-1345
