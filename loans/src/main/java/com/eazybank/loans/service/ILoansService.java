@@ -5,30 +5,30 @@ import com.eazybank.loans.dto.LoansDto;
 public interface ILoansService {
 
     /**
-     * 
-     * @param mobileNumber - Mobile number of the customer
+     *
+     * @param mobileNumber - Mobile Number of the Customer
      */
-    void createLoan (String mobileNumber);
+    void createLoan(String mobileNumber);
 
     /**
-     * 
-     * @param mobileNumber - Input mobile number
-     * @return Loan Details based on mobile number
+     *
+     * @param mobileNumber - Input mobile Number
+     *  @return Loan Details based on a given mobileNumber
      */
-    LoansDto fetchLoanDetails (String mobileNumber);
+    LoansDto fetchLoan(String mobileNumber);
 
     /**
-     * 
-     * @param loansDto - LoansDto object
-     * @return boolean indicating if update of loan details is successfull or not
+     *
+     * @param loansDto - LoansDto Object
+     * @return boolean indicating if the update of card details is successful or not
      */
-    boolean updateLoan (LoansDto loansDto);
+    boolean updateLoan(LoansDto loansDto);
 
     /**
-     * 
-     * @param loansDto - Input mobile number
-     * @return boolean indicating if delete of loan details is successfull or not
+     *
+     * @param mobileNumber - Input Mobile Number
+     * @return boolean indicating if the delete of loan details is successful or not
      */
-    boolean deleteLoan (String mobileNumber);
-    
+    boolean deleteLoan(String mobileNumber);
+
 }

@@ -1,16 +1,16 @@
 spring:
-    config:
-        activate:
-            on-profile: "prod"
+  config:
+    activate:
+      on-profile: "prod"
 
 build:
-    version: "1.0"
+  version: "1.0"
 
-accounts:
-    message: "Welcome to Eazybank loans related prod APIs"
-    contactDetails:
-        name: "Aishwariya Joshi - Prod"
-        email: "ashwinijoshi@gmail.com"
-    onCallSupport:
-        -(777) 725-2742
-        -(777) 763-9284
+loans:
+  message: "Welcome to EazyBank loans related prod APIs "
+  contactDetails:
+    name: "Pelias Sudhir - Product Owner"
+    email: "pelias@eazybank.com"
+  onCallSupport:
+    - (723) 656-8709
+    - (156) 342-0956
