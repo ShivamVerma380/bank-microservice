@@ -1,8 +1,8 @@
 package com.eazybank.cards.constants;
 
-public final class CardsConstant {
+public final class CardsConstants {
 
-    private CardsConstant() {
+    private CardsConstants() {
         // restrict instantiation
     }
 
@@ -17,4 +17,5 @@ public final class CardsConstant {
     public static final String  MESSAGE_417_DELETE= "Delete operation failed. Please try again or contact Dev team";
     // public static final String  STATUS_500 = "500";
     // public static final String  MESSAGE_500 = "An error occurred. Please try again or contact Dev team";
+
 }

@@ -1,0 +1,16 @@
+spring:
+    config:
+        activate:
+            on-profile: "qa"
+
+build:
+    version: "2.0"
+
+accounts:
+    message: "Welcome to Eazybank loans related QA APIs"
+    contactDetails:
+        name: "Smritha Reddy - QA"
+        email: "smrithreddy23@gmail.com"
+    onCallSupport:
+        -(666) 653-4727
+        -(666) 638-2842
