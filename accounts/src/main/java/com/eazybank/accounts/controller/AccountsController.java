@@ -38,7 +38,7 @@ import jakarta.validation.constraints.Pattern;
     description = "CRUD REST APIs for Accounts in EazyBank to CREATE, READ, UPDATE and DELETE account details"
 )
 @RestController
-@RequestMapping(path = "/accounts", produces = { MediaType.APPLICATION_JSON_VALUE })
+@RequestMapping(path = "/api", produces = { MediaType.APPLICATION_JSON_VALUE })
 @Validated
 public class AccountsController {
 
