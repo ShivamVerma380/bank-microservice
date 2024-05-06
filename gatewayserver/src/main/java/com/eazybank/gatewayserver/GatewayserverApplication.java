@@ -30,7 +30,7 @@ public class GatewayserverApplication {
 					.uri("lb://LOANS"))
 			.route(r -> r
 					.path("/eazybank/cards/**")
-					.filters(f -> f.rewritePath("/eazybank/cards/(?<segment>.*)", "${segment}")
+					.filters(f -> f.rewritePath("/eazybank/cards/(?<segment>.*)", "/${segment}")
 					.addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
 					.uri("lb://CARDS"))
 			.build();		

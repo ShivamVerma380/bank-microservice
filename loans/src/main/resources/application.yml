@@ -52,3 +52,9 @@ info:
     name: "loans"
     description: "Eazybank loans microservice"
     version: "1.0.0"
+
+logging:
+    level:
+        com:
+            eazybank:
+                loans: DEBUG

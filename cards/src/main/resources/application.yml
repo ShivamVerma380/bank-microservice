@@ -52,4 +52,9 @@ info:
     description: "Eazybank cards microservice"
     version: "1.0.0"
 
+logging:
+    level:
+        com:
+            eazybank:
+                cards: DEBUG
 
