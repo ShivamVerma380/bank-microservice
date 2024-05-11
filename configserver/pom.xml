@@ -56,7 +56,7 @@
 				<version>3.4.1</version>
 				<configuration>
 				<to>
-					<image>shivamv380/${project.artifactId}:s9</image>
+					<image>shivamv380/${project.artifactId}:s10</image>
 				</to>
 				</configuration>
 			</plugin>
