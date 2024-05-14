@@ -41,6 +41,9 @@ management:
     info:
       env:
         enabled: true
+    metrics:
+      tags:
+        application: ${spring.application.name}
 
 endpoints:
   shutdown:
@@ -62,7 +65,9 @@ info:
     version: "1.0.0"
 
 logging:
-    level:
-        com:
-            eazybank:
-                loans: DEBUG
+  level:
+    com:
+      eazybank:
+        loans: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"          
