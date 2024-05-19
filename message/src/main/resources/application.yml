@@ -12,6 +12,8 @@ spring:
                 emailsms-in-0: # emailsms--> functionName(email|sms) in--> input stream binding 0--> index
                     destination: send-communication  #Queue name of RabbitMQ
                     group: ${spring.application.name}
+                emailsms-out-0:
+                    destination: communication-sent
     rabbitmq:
         host: localhost
         port: 5672

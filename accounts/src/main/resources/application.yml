@@ -24,9 +24,14 @@ spring:
         openfeign:
             circuitbreaker:
                 enabled: true
+        function:
+            definition: updateCommunication
         stream:
             bindings:
-                sendCommunication-out-0: #binding name --> sendCommunication binding type --> out
+                updateCommunication-in-0: #binding name --> updateCommunication binding type --> in
+                    destination: communication-sent #queue name of RabbitMQ
+                    group: ${spring.application.name}
+                sendCommunication-out-0: #binding name --> sendCommunication; binding type --> out
                     destination: send-communication #exchange name of RabbitMQ
     rabbitmq:
         host: localhost
