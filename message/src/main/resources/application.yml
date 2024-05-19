@@ -7,3 +7,15 @@ spring:
     cloud:
         function:
             definition: email|sms #Execute email, sms function together using pipe once we invoke /emailsms. 
+        stream:
+            bindings:
+                emailsms-in-0: # emailsms--> functionName(email|sms) in--> input stream binding 0--> index
+                    destination: send-communication  #Queue name of RabbitMQ
+                    group: ${spring.application.name}
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+        connection-timeout: 10s 
+
