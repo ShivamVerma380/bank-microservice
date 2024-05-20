@@ -33,13 +33,11 @@ spring:
                     group: ${spring.application.name}
                 sendCommunication-out-0: #binding name --> sendCommunication; binding type --> out
                     destination: send-communication #exchange name of RabbitMQ
-    rabbitmq:
-        host: localhost
-        port: 5672
-        username: guest
-        password: guest
-        connection-timeout: 10s
-
+            kafka:
+                binder:
+                    brokers:
+                        - localhost:9092
+                    
 resilience4j.circuitbreaker:
     configs:
         default:
