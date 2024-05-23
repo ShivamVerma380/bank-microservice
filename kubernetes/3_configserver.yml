@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: configserver
-        image: shivamv380/configserver:s14
+        image: shivamv380/configserver:s12
         ports:
         - containerPort: 8071
 --- #Treat above n below configuration as different yml files.
