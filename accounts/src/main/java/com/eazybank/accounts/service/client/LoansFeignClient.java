@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.eazybank.accounts.dto.LoansDto;
 import com.eazybank.accounts.service.impl.LoansFallback;
 
-@FeignClient(name = "loans", fallback = LoansFallback.class)
+@FeignClient(name = "loans", url = "http://loans:8090", fallback = LoansFallback.class)
 public interface LoansFeignClient {
     
     @GetMapping(value = "/api/fetch", consumes = "application/json")

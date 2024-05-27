@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: "loans"
+  profiles:
+    active: "prod"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -16,52 +18,44 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  sql:
-    init:
-      mode: always
   config:
-        import: "optional:configserver:http://localhost:8071/"
+    import: "optional:configserver:http://localhost:8071/"
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
 
 management:
-    endpoints:
-        web:
-            exposure:
-                include: "*"
-        health:
-            readiness-state:
-                enabled: true
-            liveness-state:
-                enabled: true
-    endpoint:
-      shutdown:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      probes:
         enabled: true
-      health:
-        probes:
-          enabled: true
-    info:
-      env:
-        enabled: true
-    metrics:
-      tags:
-        application: ${spring.application.name}
+  info:
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
 
 endpoints:
   shutdown:
     enabled: true
 
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://localhost:8070/eureka/
-
 info:
   app:
     name: "loans"
-    description: "Eazybank loans microservice"
+    description: "Eazy Bank Loans Application"
     version: "1.0.0"
 
 logging:
@@ -70,4 +64,4 @@ logging:
       eazybank:
         loans: DEBUG
   pattern:
-    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"          
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"

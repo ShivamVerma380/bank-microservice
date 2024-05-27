@@ -63,7 +63,7 @@
 				<version>3.3.2</version>
 				<configuration>
 					<to>
-						<image>shivamv380/${project.artifactId}:s14</image>
+						<image>shivamv380/${project.artifactId}:s17</image>
 					</to>
 				</configuration>
 			</plugin>

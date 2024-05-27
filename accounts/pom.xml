@@ -88,7 +88,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-kubernetes-discoveryclient</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -133,7 +133,7 @@
 				<version>3.4.1</version>
 				<configuration>
 				<to>
-					<image>shivamv380/${project.artifactId}:s14</image>
+					<image>shivamv380/${project.artifactId}:s17</image>
 				</to>
 				</configuration>
 			</plugin>
